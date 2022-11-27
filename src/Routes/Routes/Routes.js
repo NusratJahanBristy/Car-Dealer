@@ -7,7 +7,7 @@ import CategoryItem from "../../Pages/Category/CategoryItem/CategoryItem";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 // import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import Home from '../../Pages/Home/Home/Home'
-import Login from "../../Pages/Home/Home/Login/Login";
+import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 // import SignUp from "../../Pages/SignUp/SignUp";
 // import PrivateRoute from "../PrivateRoute/PrivateRoute";

@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../contexts/AuthProvider';
+import { AuthContext } from '../../contexts/AuthProvider';
+import login from "../../assets/login.gif"
 
 
 const Login = () => {
@@ -30,6 +31,7 @@ const Login = () => {
 
     return (
         <div className='h-[800px] flex justify-center items-center'>
+               <img src={login} alt='' />
             <div className='w-96 p-7'>
                 <h2 className='text-xl text-center'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>

@@ -1,28 +1,28 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png"
-// import { AuthContext } from '../../contexts/AuthProvider';
+import { AuthContext } from '../../contexts/AuthProvider';
 
 
 const Navbar = () => {
-    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-    // const handleLogOut = () => {
-    //     logOut()
-    //         .then(() => { })
-    //         .catch(err => console.log(err));
-    // }
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err));
+    }
 
     const menuItems = <React.Fragment>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/appointment">Appointment</Link></li>
+        {/* <li><Link to="/appointment">Appointment</Link></li> */}
         <li><Link to="/blogs">Blog</Link></li>
-        {/* {user?.uid ?
+        {user?.uid ?
             <>
                 <li><Link to="/dashboard">Dashboard</Link></li>
                 <li><button onClick={handleLogOut}>Sign out</button></li>
             </>
-            : <li><Link to="/login">Login</Link></li>} */}
+            : <li><Link to="/login">Login</Link></li>}
     </React.Fragment>
 
     return (
@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
-                    <li><Link to="/login">Login</Link></li>
+                    {/* <li><Link to="/login">Login</Link></li> */}
                 </ul>
             </div>
         </div>
