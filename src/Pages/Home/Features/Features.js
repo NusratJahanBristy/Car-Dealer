@@ -5,7 +5,7 @@ import whitening from '../../../assets/services/3.jpg'
 import Feature from './Feature';
 
 const Features = () => {
-    
+
     const featureData = [
         {
             id: 1,

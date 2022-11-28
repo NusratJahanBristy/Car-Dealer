@@ -11,10 +11,10 @@ import useToken from '../../hooks/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { signIn,providerLogin } = useContext(AuthContext);
+    const { signIn, providerLogin } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
-    const [token]=useToken(loginUserEmail)
+    const [token] = useToken(loginUserEmail)
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -41,7 +41,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 setLoginUserEmail(data.email);
-                // navigate(from, {replace: true});
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message)
@@ -51,7 +51,7 @@ const Login = () => {
 
     return (
         <div className='h-[800px] flex justify-center items-center grid md:grid-cols-2  '>
-               <img src={login} alt='' />
+            <img src={login} alt='' />
             <div className='w-96 p-7'>
                 <h2 className='text-xl text-center'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
@@ -82,7 +82,7 @@ const Login = () => {
                 </form>
                 <p>New to Doctors Portal <Link className='text-secondary' to="/signup">Create new Account</Link></p>
                 <div className="divider ">OR</div>
-                <button onClick={handleGoogleSignIn}  className='btn btn-outline  w-full text-emerald-600'><FcGoogle className='mx-2'></FcGoogle>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline  w-full text-emerald-600'><FcGoogle className='mx-2'></FcGoogle>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );

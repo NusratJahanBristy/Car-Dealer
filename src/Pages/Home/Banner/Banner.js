@@ -1,4 +1,3 @@
-
 import React from 'react';
 import chair from '../../../assets/banner.jpg'
 import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';

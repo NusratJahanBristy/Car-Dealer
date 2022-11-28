@@ -4,9 +4,8 @@ import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
-
 const CategoriesItem = ({ product }) => {
-  const { _id, img, originalPrice, resalePrice, yearsOfUse, rating, servicesName, sellersName, condition, details, location, lastModified } = product;
+  const { img, originalPrice, resalePrice, yearsOfUse, rating, servicesName, sellersName, condition, details, location, lastModified } = product;
   return (
     <div className="card h-5/6 w-full bg-base-100 shadow-xl fixed-height">
       <PhotoProvider>
@@ -40,8 +39,8 @@ const CategoriesItem = ({ product }) => {
             <p className='text-xl text-gray-600 font-semibold'><div className='flex justify-end text-warning align-top'>{rating}<FaStar></FaStar><FaStar></FaStar><FaStarHalfAlt></FaStarHalfAlt> </div></p>
           </div>
 
-          <div className="card-actions justify-end">
-            <button className="btn btn-block btn-warning bg-emerald-600"><Link className='text-white  text-decoration-none' to={`/services/${_id}`}>Book Now</Link></button>
+          <div className="card-actions justify-end" htmlFor="booking-modal">
+            <button className="btn btn-block btn-warning bg-emerald-600"><Link className='text-white  text-decoration-none' >Book Now</Link></button>
           </div>
         </div>
       </PhotoProvider>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png"
 import { AuthContext } from '../../contexts/AuthProvider';
 
-
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
@@ -15,7 +14,6 @@ const Navbar = () => {
 
     const menuItems = <React.Fragment>
         <li><Link to="/">Home</Link></li>
-        {/* <li><Link to="/appointment">Appointment</Link></li> */}
         <li><Link to="/blogs">Blog</Link></li>
         {user?.uid ?
             <>
