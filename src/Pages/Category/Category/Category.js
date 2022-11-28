@@ -10,7 +10,7 @@ const Category = () => {
     // const [treatment, setTreatment] = useState(null);
    
     useEffect(()=>{
-        fetch("http://localhost:5000/category")
+        fetch("https://car-dealer-server-ashy.vercel.app/category")
         .then(res=>res.json())
         .then(data=>setcategories(data))
     },[])

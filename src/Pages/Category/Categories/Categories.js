@@ -8,16 +8,16 @@ const Categories = () => {
     const [products, setproducts] = useState([])
     const id=useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id.id}`)
+        fetch(`https://car-dealer-server-ashy.vercel.app/products/${id.id}`)
             .then(res => res.json())
             .then(data => setproducts(data))
             console.log(data)
     }, [])
     return (
         <div>
-             {/* <div>{products.length}</div> */}
+           
             <div className='text-center mb-2'>
-                <h2 className='text-5xl font-semibold text-orange-600'>Our Products</h2>
+                <h2 className='text-5xl font-semibold text-red-700'>Our Products</h2>
                 <p>Orders your dreamy & desire Car..</p>
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
