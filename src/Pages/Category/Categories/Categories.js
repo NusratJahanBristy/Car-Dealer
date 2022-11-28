@@ -1,13 +1,14 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import CategoriesItem from '../CategoriesItem/CategoriesItem';
 
 
 const Categories = () => {
     const [products, setproducts] = useState([])
+    const id=useParams();
     useEffect(() => {
-        fetch('categories.json')
+        fetch(`http://localhost:5000/products/${id.id}`)
             .then(res => res.json())
             .then(data => setproducts(data))
             console.log(data)

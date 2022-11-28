@@ -1,19 +1,38 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import { FcGoogle } from "react-icons/fc";
+import { GoogleAuthProvider } from 'firebase/auth';
 import login from "../../assets/login.gif"
+import useToken from '../../hooks/useToken';
 
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { signIn } = useContext(AuthContext);
+    const { signIn,providerLogin } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token]=useToken(loginUserEmail)
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/';
+    const googleProvider = new GoogleAuthProvider();
 
+    if (token) {
+        navigate(from, { replace: true });
+    }
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                toast('User Created Successfully.')
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
     const handleLogin = data => {
         console.log(data);
         setLoginError('');
@@ -21,7 +40,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, {replace: true});
+                setLoginUserEmail(data.email);
+                // navigate(from, {replace: true});
             })
             .catch(error => {
                 console.log(error.message)
@@ -30,7 +50,7 @@ const Login = () => {
     }
 
     return (
-        <div className='h-[800px] flex justify-center items-center'>
+        <div className='h-[800px] flex justify-center items-center grid md:grid-cols-2  '>
                <img src={login} alt='' />
             <div className='w-96 p-7'>
                 <h2 className='text-xl text-center'>Login</h2>
@@ -55,14 +75,14 @@ const Login = () => {
                         <label className="label"> <span className="label-text">Forget Password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
-                    <input className='btn btn-accent w-full' value="Login" type="submit" />
+                    <input className='btn bg-emerald-600 w-full' value="Login" type="submit" />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
                 <p>New to Doctors Portal <Link className='text-secondary' to="/signup">Create new Account</Link></p>
-                <div className="divider">OR</div>
-                <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <div className="divider ">OR</div>
+                <button onClick={handleGoogleSignIn}  className='btn btn-outline  w-full text-emerald-600'><FcGoogle className='mx-2'></FcGoogle>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );

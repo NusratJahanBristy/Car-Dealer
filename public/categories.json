@@ -1,8 +1,7 @@
 [
     {
-      "_id": "6381bb167597d77199999e45",
       "category_id": "01",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice": 990000,
       "resalePrice": 770000,
       "yearsOfUse": 2,
@@ -15,9 +14,8 @@
       "lastModified": "2022-11-21T11:43:07 -06:00"
     },
     {
-      "_id": "6381bb169cd530115c97a3ba",
       "category_id": "02",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice":1850000,
       "resalePrice":1100000,
       "yearsOfUse":2,
@@ -30,9 +28,8 @@
       "lastModified": "2018-12-17T04:37:07 -06:00"
     },
     {
-      "_id": "6381bb1617f63e78a4746bd1",
       "category_id": "03",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice": 8990000,
       "resalePrice": 6990000,
       "yearsOfUse": 2,
@@ -45,9 +42,8 @@
       "lastModified": "2017-06-03T12:32:08 -06:00"
     },
     {
-      "_id": "6381bb16c5e3235b28430090",
       "category_id": "02",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice": 2250000,
       "resalePrice": 1250000,
       "yearsOfUse": 4,
@@ -60,9 +56,8 @@
       "lastModified": "2020-04-06T05:05:30 -06:00"
     },
     {
-      "_id": "6381bb1640c64a10c3635d97",
       "category_id": "01",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice": 1230000,
       "resalePrice":230000,
       "yearsOfUse": 4,
@@ -75,9 +70,8 @@
       "lastModified": "2020-06-07T12:30:43 -06:00"
     },
     {
-      "_id": "6381bb16a3595282ccdd418f",
       "category_id": "02",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice":3300000,
       "resalePrice":2300000,
       "yearsOfUse": 2,
@@ -90,9 +84,8 @@
       "lastModified": "2014-08-26T03:27:51 -06:00"
     },
     {
-      "_id": "6381bb16fa52039b6f8bc09f",
       "category_id": "01",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice": 1260000,
       "resalePrice": 10000,
       "yearsOfUse": 1,
@@ -105,9 +98,8 @@
       "lastModified": "2014-01-17T08:09:39 -06:00"
     },
    {
-      "_id": "6381bb16fa52039b6f8bc09f",
       "category_id": "03",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice":1050000,
       "resalePrice":1000000,
       "yearsOfUse": 1,
@@ -120,9 +112,8 @@
       "lastModified": "2014-01-17T08:09:39 -06:00"
     },
    {
-      "_id": "6381bb16fa52039b6f8bc09f",
       "category_id": "03",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/YjM4JnX/bmw-1.jpg",
       "originalPrice":27000000,
       "resalePrice":22000000,
       "yearsOfUse": 3,

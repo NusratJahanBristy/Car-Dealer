@@ -1,24 +1,14 @@
-[
-    {
-      "_id": "01",
-      "category_id": "01",
-      "name": "Toyota "
-    },
-    {
-      "_id": "02",
-      "category_id": "01",
-      "name": "Mitsubishi"
-    },
-    {
-      "_id": "03",
-      "category_id": "01",
-      "name": "BMW"
-    }
-  ]
-
-
-
-
-
-
-
+// [
+//     {
+//       "category_id": "01",
+//       "name": "Toyota "
+//     },
+//     {
+//       "category_id": "01",
+//       "name": "Mitsubishi"
+//     },
+//     {
+//       "category_id": "01",
+//       "name": "BMW"
+//     }
+//   ]
